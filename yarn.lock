@@ -1709,6 +1709,11 @@ sharp@^0.34.4:
     "@img/sharp-win32-ia32" "0.34.5"
     "@img/sharp-win32-x64" "0.34.5"
 
+slugify@^1.6.6:
+  version "1.6.8"
+  resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.6.8.tgz#0e43855ebc7df24102d04082e0bcc3a344353604"
+  integrity sha512-HVk9X1E0gz3mSpoi60h/saazLKXKaZThMLU3u/aNwoYn8/xQyX2MGxL0ui2eaokkD7tF+Zo+cKTHUbe1mmmGzA==
+
 sonner@^1.7.1:
   version "1.7.4"
   resolved "https://registry.yarnpkg.com/sonner/-/sonner-1.7.4.tgz#4c39820db86623800a17115c8970796aa862133a"

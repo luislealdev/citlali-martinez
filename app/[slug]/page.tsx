@@ -10,6 +10,7 @@ import VideosSection from '@/components/videos-section'
 import CollabSection from '@/components/collab-section'
 import SocialSection from '@/components/social-section'
 import Footer from '@/components/footer'
+import { generateSlug } from '@/utils/utils'
 
 interface PageProps {
     params: Promise<{
@@ -17,18 +18,11 @@ interface PageProps {
     }>
 }
 
-function slugify(input: string) {
-    return input
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/(^-|-$)/g, '')
-}
-
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const { slug } = await params
-    const keyphrase = keyphrases.find((item) => slugify(item) === slug)
+    const { slug } = await params;
+
+    // Buscar la keyphrase que coincida con el slug
+    const keyphrase = keyphrases.find(kp => generateSlug(kp) === slug);
 
     if (!keyphrase) {
         return {
@@ -79,13 +73,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export async function generateStaticParams() {
     return keyphrases.map((keyphrase) => ({
-        slug: slugify(keyphrase),
-    }))
+        slug: generateSlug(keyphrase),
+    }));
 }
 
 export default async function KeyphrasePage({ params }: PageProps) {
     const { slug } = await params
-    const keyphrase = keyphrases.find((item) => slugify(item) === slug)
+    const keyphrase = keyphrases.find(kp => generateSlug(kp) === slug);
 
     if (!keyphrase) {
         notFound()
