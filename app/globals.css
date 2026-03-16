@@ -1,0 +1,111 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Palette: Warm Beige, Champagne, Deep Taupe, Charcoal, Warm White */
+  --background: oklch(0.97 0.008 60);         /* warm white / ivory */
+  --foreground: oklch(0.22 0.01 50);          /* deep charcoal */
+  --card: oklch(0.94 0.01 60);               /* light beige card */
+  --card-foreground: oklch(0.22 0.01 50);
+  --popover: oklch(0.97 0.008 60);
+  --popover-foreground: oklch(0.22 0.01 50);
+  --primary: oklch(0.22 0.01 50);            /* deep charcoal = primary CTA */
+  --primary-foreground: oklch(0.97 0.008 60);
+  --secondary: oklch(0.87 0.025 65);         /* champagne/warm sand */
+  --secondary-foreground: oklch(0.22 0.01 50);
+  --muted: oklch(0.92 0.015 62);             /* soft beige muted */
+  --muted-foreground: oklch(0.48 0.012 55);  /* taupe */
+  --accent: oklch(0.72 0.04 55);             /* warm mid-taupe accent */
+  --accent-foreground: oklch(0.97 0.008 60);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.88 0.018 62);            /* light sand border */
+  --input: oklch(0.88 0.018 62);
+  --ring: oklch(0.48 0.012 55);
+  --radius: 0.25rem;
+
+  /* Custom brand tokens */
+  --sand: oklch(0.87 0.025 65);
+  --taupe: oklch(0.55 0.025 55);
+  --ivory: oklch(0.97 0.008 60);
+  --charcoal: oklch(0.22 0.01 50);
+}
+
+@theme inline {
+  --font-sans: var(--font-jost), 'Jost', sans-serif;
+  --font-serif: var(--font-cormorant), 'Cormorant Garamond', serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+  --color-sand: var(--sand);
+  --color-taupe: var(--taupe);
+  --color-ivory: var(--ivory);
+  --color-charcoal: var(--charcoal);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
+  }
+}
+
+/* Scroll animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease forwards;
+}
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.45s; }
+.stagger-5 { animation-delay: 0.6s; }
+
