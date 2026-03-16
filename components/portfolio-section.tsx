@@ -4,17 +4,61 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 const photos = [
-  { src: '/images/portfolio-1.jpg', alt: 'Sesión editorial — estudio', category: 'Editorial' },
-  { src: '/images/portfolio-2.jpg', alt: 'Lifestyle — café', category: 'Lifestyle' },
-  { src: '/images/portfolio-3.jpg', alt: 'Outdoor — ciudad', category: 'Outdoor' },
-  { src: '/images/portfolio-4.jpg', alt: 'Comercial — restaurante', category: 'Comercial' },
-  { src: '/images/portfolio-5.jpg', alt: 'Beauty — retrato', category: 'Beauty' },
-  { src: '/images/portfolio-6.jpg', alt: 'Fashion — boutique', category: 'Fashion' },
-  { src: '/images/portfolio-7.jpg', alt: 'Lifestyle — verano', category: 'Lifestyle' },
-  { src: '/images/portfolio-8.jpg', alt: 'Comercial — producto', category: 'Comercial' },
-  { src: '/images/portfolio-9.jpg', alt: 'Editorial — rooftop', category: 'Editorial' },
-  { src: '/images/portfolio-10.jpg', alt: 'Lifestyle — mañana', category: 'Lifestyle' },
-  { src: '/images/portfolio-11.jpg', alt: 'Comercial — evento', category: 'Comercial' },
+  {
+    src: '/images/portfolio-1.JPG',
+    alt: 'Citlali Martinez en sesión editorial de modelo comercial para campaña de marca',
+    category: 'Editorial',
+  },
+  {
+    src: '/images/portfolio-2.JPG',
+    alt: 'Citlali Martinez creando contenido lifestyle en cafetería para redes sociales',
+    category: 'Lifestyle',
+  },
+  {
+    src: '/images/portfolio-3.JPG',
+    alt: 'Citlali Martinez en sesión outdoor para campaña local en el Bajío de México',
+    category: 'Outdoor',
+  },
+  {
+    src: '/images/portfolio-4.jpg',
+    alt: 'Citlali Martinez promocionando restaurante en sesión comercial para redes',
+    category: 'Comercial',
+  },
+  {
+    src: '/images/portfolio-5.jpg',
+    alt: 'Retrato beauty de Citlali Martinez para colaboración con marca de belleza',
+    category: 'Beauty',
+  },
+  {
+    src: '/images/portfolio-6.jpg',
+    alt: 'Citlali Martinez en campaña fashion para boutique y negocio local',
+    category: 'Fashion',
+  },
+  {
+    src: '/images/portfolio-7.jpg',
+    alt: 'Contenido lifestyle de verano con Citlali Martinez para marca en Celaya',
+    category: 'Lifestyle',
+  },
+  {
+    src: '/images/portfolio-8.jpg',
+    alt: 'Foto comercial de producto con Citlali Martinez para publicidad digital',
+    category: 'Comercial',
+  },
+  {
+    src: '/images/portfolio-9.jpg',
+    alt: 'Sesión editorial en rooftop con Citlali Martinez influencer lifestyle',
+    category: 'Editorial',
+  },
+  {
+    src: '/images/portfolio-10.JPG',
+    alt: 'Citlali Martinez en contenido lifestyle matutino para Instagram y TikTok',
+    category: 'Lifestyle',
+  },
+  {
+    src: '/images/portfolio-11.JPG',
+    alt: 'Citlali Martinez en cobertura comercial de evento para promoción de marca',
+    category: 'Comercial',
+  },
   // { src: '/images/portfolio-12.jpg', alt: 'Fashion — lujo', category: 'Fashion' },
 ]
 
@@ -92,7 +136,7 @@ export default function PortfolioSection() {
           >
             Cerrar ✕
           </button>
-          <div className="relative max-h-[90vh] max-w-4xl w-full aspect-[3/4]">
+          <div className="relative max-h-[90vh] max-w-4xl w-full aspect-3/4">
             <Image
               src={lightbox.src}
               alt={lightbox.alt}

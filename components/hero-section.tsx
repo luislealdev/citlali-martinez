@@ -8,16 +8,16 @@ export default function HeroSection() {
       {/* Full-bleed hero image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-model.jpg"
-          alt="Citlali Martinez — Modelo Comercial & Influencer Lifestyle"
+          src="/images/hero-model.JPG"
+          alt="Citlali Martinez, modelo comercial e influencer lifestyle en sesión fotográfica para marcas en el Bajío"
           fill
           priority
           className="object-cover object-top md:object-center opacity-80"
         />
         {/* gradient overlay bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-charcoal/85 via-charcoal/20 to-transparent" />
         {/* subtle side vignette */}
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/20 via-transparent to-charcoal/20" />
+        <div className="absolute inset-0 bg-linear-to-r from-charcoal/20 via-transparent to-charcoal/20" />
       </div>
 
       {/* Scrolling marquee line */}

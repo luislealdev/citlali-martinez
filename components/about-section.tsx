@@ -9,10 +9,10 @@ export default function AboutSection() {
         <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
           {/* Image column */}
           <div className="relative">
-            <div className="relative aspect-[3/4] overflow-hidden">
+            <div className="relative aspect-3/4 overflow-hidden">
               <Image
                 src="/images/about-model.jpg"
-                alt="Citlali Martinez sonriendo"
+                alt="Citlali Martinez modelo comercial en contenido lifestyle para campañas en Celaya, León y Querétaro"
                 fill
                 className="object-cover object-center transition-transform duration-700 hover:scale-105"
               />
